@@ -1,0 +1,170 @@
+.featuredTileGrid {
+	letter-spacing: -5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.featuredTileContainer {
+	padding: 20px 0;
+}
+
+.featuredTileItem {
+	margin-bottom: 10px;
+	display: inline-block;
+	vertical-align: top;
+	float: none !important;
+	letter-spacing: 0;
+	/* max-height: 460px; */
+}
+.titleContainer{
+	height: 63px;
+	margin-bottom: 10px;        
+}
+.titleWrap {
+	height: 16px;
+	margin-bottom: 5px;
+}
+
+.featuredTileItem.no-results {
+	width: 100%;
+	padding: 50px 20px !important;
+	font: normal 18px/22px "ProximaNovaBold", "ProximaNovaBold_T",
+		"ProximaNovaBold_C", Arial, sans-serif;
+	color: #606060;
+}
+
+.featuredTileArticle {
+	padding: 15px 0 10px 0;
+	/* height: 515px; */
+	background: #fff;
+	border-width: 3px;
+	border-top-style: solid;
+	border-color: #fff;
+	-webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.featuredTileArticle p {
+	/* width: 85%; */
+	height: 120px;
+	margin-bottom: 20px;
+	padding: 0 20px 0 20px;
+	font-size: 16px;
+	color: #404040;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+.featuredTileArticle .kicker {
+	padding: 0 40px 0 20px;
+	margin-bottom: 0px;
+}
+
+.featuredTileTitle {
+	min-height: 32px;
+	padding: 0 40px 0 20px;
+	font-size: 18px;
+	line-height: 24px;
+	color: #006d9e;
+	word-wrap: break-word;
+}
+
+.featuredTileArticle a:hover .featuredTileTitle {
+	color: #00a8c8;
+}
+
+.featuredTileCTA {
+	margin-left: 20px;
+	margin-bottom: 3px;
+}
+
+.featuredTileImage {
+	width: 100%;
+	height: 200px;
+	margin-bottom: 20px;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+.featuredTileList .featuredTileItem {
+	margin-bottom: 0;
+	padding: 20px 0;
+	border-bottom: 1px solid #c5c6c5;
+}
+
+.featuredTileMeta {
+	height: 45px;
+	overflow: hidden;
+}
+
+.featuredTileDate, .featuredTileSection, .featuredTileLocation {
+	padding: 0 40px 0 20px;
+	color: #606060;
+	font-size: 14px;
+	line-height: 16px;
+	display: block;
+}
+
+.featuredTileNumber {
+	margin-top: 5px;
+	color: #9f9f9f;
+	font: normal 36px/40px "ProximaNovaBold", "ProximaNovaBold_T",
+		"ProximaNovaBold_C", Arial, sans-serif;
+	display: block;
+}
+
+.featuredTileAnchor {
+	display: block;
+}
+
+.featuredTileAnchor:hover .featuredTileTitle, .featuredTileAnchor:hover p,
+	.featuredTileAnchor:hover .kicker {
+	color: #00a8c8;
+	transition: color 300ms ease-out;
+}
+
+.featuredTileAnchor .kicker {
+	margin-bottom: 5px;
+	color: #9f9f9f;
+}
+
+.featuredTileList .featuredTileTitle {
+	height: auto;
+	margin-bottom: 5px;
+	padding: 0;
+	color: #606060;
+	font-family: "ProximaNovaSemiBold", "ProximaNovaSemiBold_T",
+		"ProximaNovaSemiBold_C", Arial, sans-serif;
+	overflow: inherit;
+}
+
+.featuredTileList .featuredTileSection, .featuredTileList .featuredTileDate,
+	.featuredTileList .featuredTileLocation {
+	padding: 0;
+}
+
+.featuredTileList p {
+	margin-bottom: 0;
+	color: #404040;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 639px) {
+	.featuredTileImage {
+		height: 175px;
+	}
+	.featuredTileTitle {
+		height: auto;
+	}
+}
+
+@media only screen and (min-width: 640px) and (max-width: 959px) and
+	(orientation: portrait) {
+	.featuredTileImage {
+		height: 150px;
+	}
+}

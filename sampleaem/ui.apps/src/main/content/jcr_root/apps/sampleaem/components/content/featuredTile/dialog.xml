@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}800"
+    width="{Long}1000"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="FeatureContainerTile Config&#xa;">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <featuredTiles
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please configure min - 1 and max - 15"
+                        fieldLabel="Featured Tiles"
+                        key="featuredTileMultifield"
+                        maxItems="15"
+                        minItems="1"
+                        name="./featuredTileMultifield"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <titleOverride
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Enter Title [Max - 75]"
+                                    fieldLabel="Title"
+                                    key="titleOverride"
+                                    maxLength="75"
+                                    width="{Long}500"
+                                    xtype="textfield"/>
+                                <featuredTileImage
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Enter Featured Tile Image Path"
+                                    fieldLabel="Featured Tile Image"
+                                    key="imagePath"
+                                    rootPath="/content/dam"
+                                    width="{Long}500"
+                                    xtype="pathfield"/>
+                                <descriptionOverride
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Enter Description"
+                                    fieldLabel="Description"
+                                    key="descriptionOverride"
+                                    width="{Long}500"
+                                    xtype="richtext">
+                                    <rtePlugins jcr:primaryType="nt:unstructured">
+                                        <links jcr:primaryType="nt:unstructured">
+                                            <linkDialogConfig
+                                                jcr:primaryType="nt:unstructured"
+                                                height="{Long}316">
+                                                <linkAttributes jcr:primaryType="cq:WidgetCollection">
+                                                    <linkAdvanced
+                                                        jcr:primaryType="cq:Widget"
+                                                        collapsed="{Boolean}true"
+                                                        collapsible="{Boolean}true"
+                                                        inputValue="advanced"
+                                                        name="./linkdialog/cq:adhocLinkTrackingTab"
+                                                        title="Link tracking"
+                                                        xtype="dialogfieldset">
+                                                        <items jcr:primaryType="cq:WidgetCollection">
+                                                            <enable
+                                                                jcr:primaryType="nt:unstructured"
+                                                                attribute="enabletracking"
+                                                                fieldDescription="override analytics framework settings"
+                                                                fieldLabel="Custom link tracking"
+                                                                name="./linkdialog/cq:adhocLinkTrackingEnableTracking"
+                                                                xtype="checkbox">
+                                                                <listeners
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableSCFields(component.checked);}"/>
+                                                            </enable>
+                                                            <events
+                                                                jcr:primaryType="nt:unstructured"
+                                                                attribute="adhocevents"
+                                                                fieldDescription="e.g.: event2, event7"
+                                                                fieldLabel="Include SiteCatalyst events"
+                                                                name="./linkdialog/cq:adhocLinkTrackingEvents"
+                                                                xtype="textfield"/>
+                                                            <evars
+                                                                jcr:primaryType="nt:unstructured"
+                                                                attribute="adhocevars"
+                                                                fieldDescription="e.g.: eVar1: pagedata.url, prop4: 'const'"
+                                                                fieldLabel="Include SiteCatalyst variables"
+                                                                name="./linkdialog/cq:adhocLinkTrackingEvars"
+                                                                xtype="textfield"/>
+                                                        </items>
+                                                    </linkAdvanced>
+                                                </linkAttributes>
+                                            </linkDialogConfig>
+                                        </links>
+                                        <tinyMCE
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <edit
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <findreplace
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <format
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <image
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <justify
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <lists
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <misctools
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <paraformat
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <spellcheck
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <styles
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <responsiveTable
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <undo
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <thresholds
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <sunsuperscript
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                    </rtePlugins>
+                                </descriptionOverride>
+                                <CTALinkText
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Enter CTA Link Text [Max - 30]"
+                                    fieldLabel="CTA Link Text"
+                                    key="CTALinkText"
+                                    maxLength="30"
+                                    width="{Long}500"
+                                    xtype="textfield"/>
+                                <CTALink
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="CTA Link"
+                                    key="CTALink"
+                                    rootPath="/content"
+                                    width="{Long}500"
+                                    xtype="pathfield"/>
+                                <openInNewWindow
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Check to open link in new tab"
+                                    fieldLabel="Open link in New Window?"
+                                    input="false"
+                                    key="openInNewWindow"
+                                    name="./openInNewWindow"
+                                    xtype="checkbox"/>
+                            </items>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            removeditem="function(list) {&#xa;  var length = list.items.length;&#xa;  if (length &lt;= list.minItems) {&#xa;       CQ.Ext.Msg.show(&#xa;                {title: 'Minimum Limit reached',  msg: 'You should add atleast '+this.minItems+' items to this module',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK}&#xa;            );return false;&#xa;  }&#xa;}"/>
+                    </featuredTiles>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
