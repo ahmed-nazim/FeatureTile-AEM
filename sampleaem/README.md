@@ -5,7 +5,13 @@ This project contains sample feature tile component which can be edited through 
 ![Screenshot](Featured-Tile.jpg)
 
 
+
+
 ## How to build
+
+This project requires the latest ACS Commons package.
+
+Download from https://adobe-consulting-services.github.io/acs-aem-commons
 
 To build all the modules run in the project root directory the following command with Maven 3:
 
@@ -31,4 +37,4 @@ Or to deploy only the bundle to the author, run
 
 Component is Already added to the following page
 
-Navigate to http://<host>:<portnumber>/content/sampleaem/en.html to see an example
+Navigate to /content/sampleaem/en.html to see an example
